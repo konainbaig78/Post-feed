@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Post Feed</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Post Feed</h1>
+  </header>
+
+  <!-- Form to Add a New Post -->
+  <section class="new-post-form">
+    <h2>Create a New Post</h2>
+    <textarea id="post-content" placeholder="What's on your mind?" rows="3"></textarea>
+    <input type="file" id="post-image" accept="image/*">
+    <button id="post-button">Post</button>
+  </section>
+
+  <!-- Feed Container -->
+  <main class="feed-container" id="feed-container">
+    <!-- Example Post -->
+    <div class="post">
+      <div class="post-header">
+        <img src="https://via.placeholder.com/50" alt="User Avatar" class="avatar">
+        <h2 class="username">John Doe</h2>
+        <span class="timestamp">2 hours ago</span>
+      </div>
+      <p class="post-content">
+        This is an example post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <div class="post-actions">
+        <button class="like-btn">Like <span class="like-count">0</span></button>
+        <button class="comment-btn">Comment</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script type="module" src="firebase.js"></script>
+</body>
+</html>
